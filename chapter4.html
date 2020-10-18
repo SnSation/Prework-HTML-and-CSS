@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML and CSS: Design and Build Websites - Chapter 4</title>
+    </head>
+    <body>
+        <div>
+            <h1>Chapter 4: Links</h1>
+            <h2>Links</h2>
+            <ul>
+                <li><b>Link:</b></li>
+                    <ul>
+                        <li>An element which connects one item to another</li>
+                        <li>Tag: 'a'</li>
+                    </ul>
+                <li><b>Reference:</b>
+                    <ul>
+                        <li>An attribute which indicates what the link should connect to</li>
+                        <li>Attribute: 'href'</li>
+                    </ul>
+                </li>
+                <li><b>Syntax:</b>
+                    <ul>
+                        <li>&lt;a href="https://www.sample.com"&gt;Sample Website&lt;/a&gt;</li>
+                        <li>&lt;a href="chapter3.html"&gt;Chapter 3 File&lt;/a&gt;</li>
+                        <li>
+                            <ul>
+                                <li>Links to other files require the file path as written in a command line interface</li>
+                            </ul>
+                        </li>
+                    </ul>
+                 </li>
+                <li><b>Email Links:</b>
+                    <ul>
+                    <li><b>'mailto:'</b>
+                        <ul>
+                            <li>A value of 'href' which opens the user's email application with the value as the recipient</li>
+                            <li>Example: &lt;a href="mailto:person@sample.com"&gt;Email Person&lt;a&gt;</li>
+                        </ul>
+                    </li>
+                    </ul>
+                </li>
+                <li><b>'target:'</b>
+                    <ul>
+                        <li>An attribute of &lt;a&gt; which indicates where to send the linked item</li>
+                        <li>Example: &lt;a href="http://www.google.com/" target="_blank"&gt;Google&lt;/a&gt;
+                            <ul>
+                                <li>This will open the google website in a new browser window</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><b>'id:'</b>
+                    <ul>
+                        <li>An attribute which adds an identifier to an element</li>
+                        <li>Links can reference 'id' values</li>
+                        <li>Example: &lt;h1 id="top"&gt;Top of the Page&lt;/h1&gt;
+                            <ul>
+                                <li>The 'id' attribute marks this specific &lt;h1&gt; as "top"</li>
+                                <li>A link that references the 'id' value "top" will send the user to the part of the page it is located</li>
+                            </ul>
+                        </li>
+                        <li><b>'#'</b> at the beginning of a reference indicates the reference is to an element's 'id'</li>
+                        <li>Example: &lt;p&gt;&lt;a href="#top"&gt;Go to Top&lt;/a&gt;&lt;/p&gt;
+                            <ul>
+                                <li>This link will send a user to the element with an 'id' value of "top" on the same page</li>
+                            </ul>
+                        </li>
+                        <li>'id' can be used to link to a specific part of another page
+                            <ul>
+                                <li>Example: &lt;p&gt;&lt;a href="https://www.examplepage.com/#top"&gt;Example Page&lt;/a&gt;&lt;/p&gt;
+                                    <ul>
+                                        <li>This link will go to the element with the 'id' value "top" on the page "https:/www.examplepage.com/"</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

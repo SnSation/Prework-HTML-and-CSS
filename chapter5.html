@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML and CSS: Design and Build Websites - Chapter 5</title>
+    </head>
+    <body>
+        <div>
+            <h1>Chapter 5: Images</h1>
+            <ul>Images Should:
+                <li>Be Relevant</li>
+                <li>Convey Information</li>
+                <li>Be Recognizable</li>
+                <li>Match the Page's Color Palette</li>
+            </ul>
+            <h2>Working With Images</h2>
+            <h3>Storage</h3>
+            <ul>
+                <li>Images for a page should be stored in their own directory</li>
+                <li>This directory should be a child of the folder which holds the page's related data</li>
+            </ul>
+            <h3>Adding Images</h3>
+            <ul>
+                <li><b>'&lt;img /&gt;'</b>
+                    <ul>
+                        <li>An element which contains an image</li>
+                        <li>&lt;img /&gt; is a self-enclosed element, meaning it does not need a closing tag</li>
+                        <li><b>'src'</b>
+                            <ul>
+                                <li>An attribute of &lt;img /&gt; where the value is the image file to load</li>
+                            </ul>
+                        </li>
+                        <li><b>'alt'</b>
+                            <ul>
+                                <li>An attribute of &lt;img /&gt; where the value is placeholder text should the image not load</li>
+                            </ul>
+                        </li>
+                        <li><b>'title'</b>
+                            <ul>
+                                <li>An attribute of &lt;img /&gt; where the value is the text that shows when the image is moused over</li>
+                            </ul>
+                        </li>
+                        <li>Example: &lt;img src="exampleimage.jpg" alt="Example Image" title="Example Title" /&gt;</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Sizing Images</h3>
+            <p>Images can be forced to fill a space with HTML</p>
+            <ul>
+                <li><b>'height'</b>
+                    <ul>
+                        <li>An attribute of &lt;img /&gt; which dictates the height of the image</li>
+                    </ul>
+                </li>
+                <li><b>'width'</b>
+                    <ul>
+                        <li>An attribute of &lt;img /&gt; which dictates the width of an image</li>
+                    </ul>
+                </li>
+                <li>'height' and 'width' use pixels as units</li>
+                <li>Example: &lt;img src="assets/images/exampleimage.jpg" width="600" height="450" /&gt;
+                    <ul>
+                        <li>This will load the image as if it were 600 pixels wide and 450 pixels tall</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Placing Images</h3>
+            <ul>
+                <li>Where in the code the &lt;img /&gt; is placed affects where on the page it will be located
+                    <ul>
+                        <li>Before an Element: The next element will begin on the line after &lt;img /&gt;</li>
+                        <li>Beginning in an Element: The first line of text will align with the bottom of &lt;img /&gt;</li>
+                        <li>Within the Content of an Element: &lt;img /&gt; will be placed between the content surrounding it
+                            <ul>
+                                <li>&lt;img /&gt; will force space between content above and content on the same line as &lt;img /&gt;</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Alignment
+                    <ul>
+                        <li><b>'align'</b>
+                            <ul>
+                                <li>An attribute of &lt;img /&gt; to indicate how surrounding content should be placed around the &lt;img /&gt;</li>
+                                <li><b>'left':</b> A value of 'align' which indicates for text to flow to the right of the &lt;img /&gt;</li>
+                                <li><b>'right':</b> A value of 'align' which indicates for text to flow to the left of the &lt;img /&gt;</li>
+                                <li>'align' is a legacy attribute, but is still found on many pages</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Image Rules</h3>
+            <ol>
+                <li>Save Images in the Correct Format</li>
+                <li>Save Images in the Correct Size</li>
+                <li>Use the the Correct Resolution
+                    <ul>
+                        <li><b>Resolution:</b> The number of pixels that fit in a given area</li>
+                        <li>The standard resolution is 72 ppi</li>
+                        <li>Resolution is interpreted in different ways by different systems
+                            <ul>
+                                <li>This can be how many pixels fit in a static area or, inversely, how much space does a static amount of pixels use</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+            <h3>Image Formats</h3>
+            <p>There are many filetypes for Images</p>
+            <ul>
+                <li><b>.JPEG:</b> A bitmap filetype good for images with color</li>
+                <li><b>.PNG:</b>A bitmap filetype good for images with few colors</li>
+                <li><b>.GIF:</b> A multi-use filetype for static images or video</li>
+                <li><b>.SVG</b> A vector filetype which maintains resolution at any size</li>
+            </ul>
+            <h3>Figure and Caption</h3>
+            <ul>
+                <li><b>&lt;figure&gt;:</b> An element used to contain a &lt;img /&gt; with an associated caption</li>
+                <li><b>&lt;figcaption&gt;:</b> An element containing a caption associated with an image</li>
+                <li>Example:
+                    <blockquote>
+                        &lt;figure&gt;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="images/exampleimage.jpg" alt="Example Image" /&gt;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;figcaption&gt;Example Caption for Example Image&lt;/figcaption&gt;<br />
+                        &lt;/figure&gt;
+                    </blockquote>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

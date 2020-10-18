@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML and CSS: Design and Build Websites - Chapter 7</title>
+    </head>
+    <body>
+        <h1>Chapter 7: Forms</h1>
+        <h2>Form Controls</h2>
+        <p><b>'control':</b> A type of form</p>
+        <ul>Text:
+            <li><b>Text Input:</b> Used for a single line of text</li>
+            <li><b>Password Input:</b> Same as text input, but hides characters</li>
+            <li><b>Text Area:</b> Used for multiple lines of text</li>
+        </ul>
+        <ul>Choices:
+            <li><b>Radio Buttons:</b> Select one option</li>
+            <li><b>Checkbox:</b> Select one or more</li>
+            <li><b>Drop-Down Box:</b> Select from a list</li>
+        </ul>
+        <ul>Submission
+            <li><b>Submit Button:</b> Send data elsewhere</li>
+            <li><b>Image Button:</b> Same as submit button, but uses an image</li>
+        </ul>
+        <ul>Upload
+            <li><b>File Upload: Allows file transfer from user to another location</b></li>
+        </ul>
+        <h2>Form Mechanics</h2>
+        <ol>
+            <li>User inputs and submits data</li>
+            <li>Each control's name is sent to the server with the input values</li>
+            <li>Server uses data and may send a return</li>
+        </ol>
+        <h2>Form Structure</h2>
+        <ul>
+            <li><b>&lt;form&gt;:</b> An element which collects user input and sends it somewhere else</li>
+            <li><b>'action':</b> An attribute of &lt;form&gt; which determines where data is sent</li>
+            <li><b>'method':</b> An attribute of &lt;form&gt; which determines how data is sent
+                <ul>
+                    <li><b>'get':</b> A value of 'method' which adds the values from the form to the end of the URL specified in the 'action' attribute</li>
+                        <ul>'get' Uses:
+                            <li>Search Boxes</li>
+                            <li>Data Retreival</li>
+                        </ul>
+                    </li>
+                    <li><b>'post':</b> A value of 'method' which sends form values in HTTP headers</li>
+                        <ul>'post' Uses:
+                            <li>File Upload</li>
+                            <li>Large Amounts of Text</li>
+                            <li>Sensitive Input</li>
+                            <li>Database Modifications</li>
+                        </ul>
+                    </li>
+                    <li>'get' is the default method if none is specified</li>
+                </ul>
+            </li>
+            <li><b>'id':</b> The form's id value is used by scripts to identify a form and check its information</li>
+        </ul>
+        <h2>Input</h2>
+        <ul><b>&lt;input&gt;:</b> An element which determines the type of form control
+            <li><b>'name':</b> An attribute of &lt;input&gt; which determines the name of the variable the input will be stored as</li>
+            <li><b>'size':</b> An attribute of &lt;input&gt; which determines the size of the text box
+                <ul>
+                    <li>'size' is a legacy attribute</li>
+                    <li>CSS determines the size of modern text boxes</li>
+                </ul>
+            </li>
+            <li><b>'maxlength':</b> An attribute of &lt;input&gt; which determines the maximum amount of characters a text field will allow</li>
+            <li><b>'checked':</b> An attribute of &lt;input&gt; which indicates if the &lt;input&gt; has been selected
+                <ul>
+                    <li>Only 1 radio button should have a "checked" attribute and value</li>
+                    <li>All selected checkbox buttons should have a "checked" attribute and value</li>
+                </ul>
+            </li>
+            <li><b>'placeholder':</b>An attribute of &lt;input&gt; which will display its value as temporary text in a text field</li>
+            <li><b>'type':</b> An attribute of &lt;input&gt; which determines the type of value a form should accept
+                <ul>
+                    <li><b>'text':</b> A value of the 'type' attribute which creates a single line text input</li>
+                    <li><b>'password':</b> A value of the 'type' attribute similar to 'text', but masks characters on the user end</li>
+                    <li><b>'checked':</b> An attribute of &lt;input&gt; which indicates if the &lt;input&gt; has been selected
+                        <ul>
+                            <li>Only 1 button should have '"checked" as the value of the 'checked' attribute, if any at all</li>
+                        </ul>
+                    </li>            
+                    <li><b>'radio':</b>A value of the 'type' attribute which generates a button for the user to select
+                        <ul>
+                            <li>'radio' only allows for 1 option to be selected</li>
+                            <li>The 'name' value should be the same for all radio buttons in a given form</li>
+                            <li>The 'value' value determines the value that will be stored in the 'name' variable if that options is selected</li>
+                            <li>Text between 'radio' type tags will be displayed next to the button
+                                <ul>
+                                    <li>The content of a radio button is ARBITRARY and IRRELEVANT to the server</li>
+                                    <li>Programatically, the only value that will be sent to the server is the value of the 'value' attribute</li>
+                                </ul>
+                            </li>
+                            <li>Once a button of the 'radio' type is selected, one button in that form must always be selected</li>
+                        </ul>
+                    </li>
+                    <li><b>'checkbox':</b> A value of 'type' which generates a checkbox
+                        <ul>
+                            <li>Checkboxes can be selected and deselected</li>
+                            <li>Multiple checkboxes can be selected, simultaneously</li>
+                        </ul>
+                    </li>
+                    <li><b>'file':</b> A value of the 'type' attribute which allows the selection and submission of a file from the user
+                        <ul>
+                            <li>The 'file' value will generate a text box and a browse button</li>
+                        </ul>
+                    </li>
+                    <li><b>'submit':</b> A value of the 'type' attribute which sends input in the form to the location specified in the 'action' attribute
+                        <ul>
+                            <li>The value of the 'value' attribute determines the value displayed in the button</li>
+                        </ul>
+                    </li>
+                    <li><b>'image':</b> A value of the 'type' attribute which generates a submit button with the specified image and attributes</li>
+                    <li><b>'hidden':</b> A value of the 'type' attribute which hides a form value from the user</li>
+                    <li><b>'date':</b> A value of the 'type' attribute which generates a date input field
+                        <ul>
+                            <li>Older browsers do NOT recognize the 'date' type</li>
+                        </ul>
+                    </li>
+                    <li><b>'email':</b> A value of the 'type' attribute which generates an email submission form
+                        <ul>
+                            <li>Input that does not fill the requirements of an email address will NOT be validated</li>
+                            <li>The 'email' type requires the browser to support HTML5 form validation</li>
+                        </ul>
+                    </li>
+                    <li><b>'url':</b> A value of the 'type' attribute which generates a url submission form
+                        <ul>
+                            <li>Input that does not fill the requirements of a URL will not be validated</li>
+                            <li>The 'url' type requires the browser to support HTML5 form validation</li>
+                        </ul>
+                    </li>
+                    <li><b>'search':</b> A value of the 'type' attribute which generates a search submission form
+                        <ul>
+                            <li>Older browsers will treat 'search' type controls as a 'text' type controls</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul><b>&lt;textarea&gt;:</b> An element used in a &lt;form&gt; which allows for multiple lines of text
+            <li>Any text between the &lt;textarea&gt; tags will be entered in the form when it loads</li>
+        </ul>
+        <ul><b>&lt;select&gt;:</b> An element in &lt;form&gt; which generates a drop down list for the user to select from
+            <li><b>&lt;option&gt;:</b> An element of &lt;select&gt; which generates a list item for &lt;select&gt;
+                <ul>
+                    <li><b>'selected':</b> An attribute of &lt;option&gt; which indicates if the &lt;option&gt; has been selected</li>
+                </ul>
+            </li>
+            <li><b>'size':</b> An attribute of &lt;select&gt; which determines the number of &lt;option&gt; shown at once in &lt;select&gt;</li>
+            <li<b>'multiple':</b> An attrubute of &lt;select&gt; which allows users to select multiple &lt;option&gt; at once</li>
+        </ul>
+        <ul><b>&lt;button&gt;:</b> An element which indicates its contents are a button
+            <li>&lt;button&gt; allows for greater control of the content and appearance of a button</li>
+        </ul>
+        <ul><b>&lt;label&gt;:</b> An element in &lt;form&gt; which makes its contents accessible to vision-impaired users
+            <li>&lt;label&gt; can be used 2 ways:
+                <ul>
+                    <li>&lt;label&gt; can be wrapped around the control (&lt;input&gt;) to add a text label associated with the control</li>
+                    <li>&lt;label&gt; can be kept separate from the control and associated with it by using the 'id' and 'for' attributes</li>
+                    <li><b>'for':</b> An attribute of &lt;label&gt; which associates it with any control with the same value for its 'id' attribute</li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Grouping Form Elements</h2>
+        <ul><b>&lt;fieldset&gt;:</b> An element which groups related controls together
+            <li>&lt;fieldset&gt; is wrapped around all related controls</li>
+            <li>Most browsers will wrap elements inside &lt;fieldset&gt; tags with an box</li>
+            <li><b>&lt;legend&gt;:</b> An element containing a caption for a &lt;fieldset&gt;
+                <ul>
+                    <li>&lt;legend&gt; is written directly after the opening &lt;fieldset&gt;</li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Form Validation</h2>
+        <p><b>Form Validation:</b> A message indicating a form control has not been filled in correctly</p>
+        <p>Form Validation is usually done with JavaScript</p>
+        <h2>Example Form</h2>
+    </body>
+</html>
