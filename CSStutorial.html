@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Tutorial html</title>
+    </head>
+    <body>
+        <div>
+            <h1>CSS Syntax</h1>
+            <ul>CSS rule-sets consist of a "selector" and "declaration"
+                <li><b>'Selector':</b> The HTML element to be modified</li>
+                <li><b>'Declaration':</b> The modification to take place</li>
+                <li>Examples:
+                    <ul>
+                        <li>h1 {color:blue;font-size:12px</li>
+                        <li>The selector - 'h1' - indicates this rule-set will apply to 'h1' elements</li>
+                        <li>The declaration - {color:blue; font-size:12px} - indicates the color should be blue and the font-size should be 12px
+                            <ul>
+                                <li>There can be multiple declarations in a rule-set, separated by ";"</li>
+                                <li>Declarations are key-value pairs</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>#paragraph1 { <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: red;<br />
+                        }
+                            <ul>
+                                <li>Selectors can be 'id' values of HTML elements</li>
+                                <li>Rule-sets can be written across multiple lines</li>        
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>p.center {<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align; center;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:red;<br />
+                        }
+                            <ul>
+                                <li>Selectos can target all elements of a class with "."</li>
+                                <li>The above rule-set targets all &lt;p&gt; with a 'class' attribute value of "center"</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>* {text-align:center;}
+                            <ul>
+                                <li>The "*" symbol targets ALL HTML elements on the page</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>h1, h2, h3, p {text-align:center;}
+                            <ul>
+                                <li>A selector can target multiple elements with the same declarations by separating them with a ","</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <h1>Adding CSS</h1>
+            <p><b>'Style Sheet': A set of CSS modifications</b></p>
+            <ul>Style Sheets can be added to HTML in 3 ways
+                <li>External CSS
+                    <ul>
+                        <li>A style sheet can be written in a separate file and linked to the HTML document</li>
+                        <li><b>&lt;link&gt;:</b> An element defined in &lt;head&gt; which links external items to an HTML file</li>
+                        <li>Example:
+                            <ul>
+                                <li>&lt;link rel="stylesheet" href="CSStutorial.css"&gt;</li>
+                                <li><b>'rel':</b> An attribute of &lt;link&gt; which defines what kind of item is being linked</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Internal CSS
+                    <ul>
+                        <li>A style sheet can be written directly in the &lt;head&gt; of an HTML document</li>
+                        <li><b>&lt;style&gt;:</b> An element defined in &lt;head&gt; which indicates its contens are a style sheet</li>
+                        <li>Example:
+                            <ul>
+                                <li>&lt;head&gt;<br />
+                                &lt;style&gt;<br />
+                                body { <br />
+                                background-color: blue;<br />
+                                }<br />
+                                h1 {<br />
+                                color: red;<br />
+                                margin-left: 40px;<br />
+                                }<br />
+                                &lt;style&gt;<br />
+                                &lt;head&gt;
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Inline CSS
+                    <ul>
+                        <li>A style sheet can be written for a specific element as its attributes</li>
+                        <li>Example:
+                            <ul>
+                                <li>&lt;p style="color:red;"&gt;This paragraph will be red&lt;/p&gt;</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>HTML documents can support multiple style sheets at once</li>
+                <li>Style Sheets will be applied in the following order (cascade):
+                    <ol>
+                        <li>Inline Styles</li>
+                        <li>External and Internal Styles in the order they appear in &lt;head&gt;</li>
+                        <li>Browser Default Styles</li>
+                    </ol>
+                </li>
+            </ul>
+            <p>CSS Comment: "/* This is the Comment */"</p>
+        </div>
+    </body>
+</html>
